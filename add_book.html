@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Add Books Page</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<script src="script.js"></script>
+	</head>
+
+	<body>
+		<div class="header">
+			<img src="https://image.freepik.com/free-vector/library-logo_23-2147505735.jpg" alt="logo" />
+			<h1 style="padding:10px;">The International Library of Science and Technology</h1>
+		</div>
+		
+		<div>
+			<ul>
+				<li><a href="home.html">Home</a></li>
+				<li><a class="nav-active" href="add_book.html">Add Books</a></li>
+				<li><a href="#contact">Contact</a></li>
+				<li><a href="#about">About</a></li>
+				<li style="float:right;"><a href="login.html">Logout</a></li>
+			</ul>
+		</div>
+		
+		
+		<div class="section-head">
+			<h2 style="margin-left:15px;">Add New Book To Library</h2>
+		</div>	
+		
+		<div class="add-book-container">
+
+		<!--<form id="addBookForm" >-->
+		<table style="border-style: outset">
+			<tr>
+				<th>Book Id</th>
+				<td><input type="text" placeholder="Enter Book Id" id="bookId" onchange="return validateBookId()"></td>
+			</tr>
+			<tr>
+				<th>Book Name</th>
+				<td><input type="text" placeholder="Enter Name of Book" id="bname" onchange="return validateBookName()"></td>
+			</tr>
+			<tr>
+				<th>Author Name</th>
+				<td><input type="text" placeholder="Enter Author Name" id="aname" onchange="return validateAuthorName()"></td>
+			</tr>
+			<tr>
+				<th>Description</th>
+				<td><textarea id="bookDesc" style="height: 100px;" placeholder="Enter brief description of the book"></textarea></td>
+			</tr>
+			<tr>
+				<th>Price</th>
+				<td><input type="number" id="price" onchange="return validateBookPrice()"></td>
+			</tr>
+			<tr>
+				<th>Book Genres</th>
+				<td>
+					<select id="genres">
+						<option value="classic">Classic</option>
+						<option value="comic">Comic</option>
+						<option value="drama">Drama</option>
+						<option value="horror">Horror</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th colspan="2">
+					<button type="submit" class="add-book-button" onclick="return insRow();"><b>Add Book</b></button>
+					<button type="submit" class="add-book-button" onclick="return clearData();"><b> Clear  </b></button>
+				</th>
+			</tr>
+		</table>		
+		<!--</form>-->
+		
+		<div class="cart">
+			<table id="POITable">
+				<tr>
+					<th>No.</th>
+					<th>Book ID</th>
+					<th>Book Name</th>
+					<th>Price</th>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr style="display:none;">
+					<td>1</td>
+					<td>bookid</td>
+					<td>book name</td>
+					<td>price</td>
+					<td><input type="button" id="delPOIbutton" value="Delete" onclick="deleteRow(this)" /></td>
+					<td><input type="button" id="movebutton" value="Move" onclick="moveRow(this)" /></td>
+				</tr>
+			</table>		
+		</div>
+		
+		</div>
+		
+		<footer>
+		<div class="footer" >
+			<i class="material-icons icon">email</i>
+			<i class="material-icons icon">public</i>
+			<i class="material-icons icons">comment</i>
+			<p style="float:right;margin:auto;padding:5px 5px;">@Copyright reserved</p>
+		</div>
+		</footer>
+		
+	</body>
+</html>

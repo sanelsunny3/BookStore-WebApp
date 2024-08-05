@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Login Page</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">		
+		<script src="script.js"></script>
+	</head>
+
+	<body>
+				
+		<div class="welcome-header">
+			<marquee direction="left" style="margin-top:5px;">Welcome to world of knowledge</marquee>
+		</div>
+	
+		<div class="header" style="margin-bottom:80px;">
+			<img src="https://image.freepik.com/free-vector/library-logo_23-2147505735.jpg" alt="logo" />
+			<h1 style="padding:10px;">The International Library of Science and Technology</h1>
+		</div>
+	
+		<div style="margin:auto;border-style: outset;width:420px;background-color:#f8f8f8;"> 
+			<center>
+				<form name="loginForm" action="home.html" onsubmit="return validateform()" >
+					<table>
+					<tr>
+						<th colspan="2"><strong>LOGIN</strong></th>
+					</tr>
+					<tr>
+						<th>Username</th>
+						<td><input type="text" placeholder="Enter Username" name="uname" required></td>
+					</tr>
+					<tr>
+						<th>Password</th>
+						<td><input type="password" placeholder="Enter password" name="password" required></td>
+					</tr>
+					<tr>
+						<th colspan="2"><button type="submit"><b>Login</b></button></th>
+					</tr>
+					</table>
+				</form>
+			</center>
+		</div>
+		
+		
+		<footer>
+		<div class="login-footer" >
+			<i class="material-icons icon">email</i>
+			<i class="material-icons icon">public</i>
+			<i class="material-icons icons">comment</i>
+			<p style="float:right;margin:auto;padding:5px 5px;">@Copyright reserved</p>
+		</div>
+		</footer>
+		
+	</body>
+</html>
